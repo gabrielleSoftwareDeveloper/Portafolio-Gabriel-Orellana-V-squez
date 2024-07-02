@@ -1,0 +1,1182 @@
+/*Los colores se han podido seleccionar gracias a la extensión
+de Google chrome "colorzilla" por medio de la pipeta.*/
+
+/*Definición de variables.*/
+:root{
+    --color-principal: #FFFFFF;
+    --color-secondary: #ebc4c4;
+
+    --color-background: #F2F7F9;
+    --color-transparent: transparent;
+
+    --color-icon: #a1a8ae;
+    --color-titles: #222222;
+    --color-subtitle: #888;
+    --color-text: #555;
+
+    --color-border-reviews: #E5E6E7;
+    --color-company: #9c9a9f;
+
+    --color-background-certificate: #f5f5f5;
+
+    --color-background-contact: #FCFCFC; 
+}
+
+/*Estilos generales*/
+html{
+    font-size: 10px; /*Definición del font-size de la raíz del documento, 1REM = 10px*/
+}
+
+body{
+   width: 100%;
+   height: auto;
+   font-family: ‘Playfair Display’, serif;
+   /*"Poppins", Arial, Helvetica, sans-serif;*/
+   background-color: var(--color-background);
+   font-size: 1.5rem;
+   color: var(--color-text);
+   overflow: hidden; /*Se elimina el scroll*/
+}
+
+h1, h2, h3, h4, h5, h6{
+    color: var(--color-titles);
+}
+
+
+/*Imagen de fondo*/
+body{
+    background: url("../img/fondo.png");
+    background-repeat: no-repeat;
+    background-position: -128px -128px; /*Desplazamiento x e y.*/
+
+}
+
+/*Layout o estructura principal.*/
+
+.layout{
+    position: relative; /*Para el comprotamiento de la caja completa*/
+    min-width: 1290px; /*Anchura mínima*/
+    width: 75%;
+    height: 80vh; /*Equivale +- a un 80%*/
+    min-height: 80vh;
+    margin: 10vh auto; /*Margen del 10% arriba y abajo.*/
+
+    display: grid;
+    grid-template-areas: 
+        "aside content";
+    grid-template-columns: 30% 70%; /*Solo nos es interesante utilizar columns pues no tenemos rows a las que dar una medida (solo 1)*/
+
+    /*Sombra debajo del Layout*/
+    border-radius: 4rem;
+    box-shadow: 0 0 100px rgba(0, 0, 0, 0.25); /*0.25 y 25% en rgb será la opacidad*/
+    /*Desplazamiento x = 0, y = 0, 100px de difuminado, ¿-5? Desplaza hacia arriba ligeramente.*/
+}
+
+/*Menú de navegación.*/
+.layout__aside{
+    grid-area: aside; /*Vinculamos con el grid-template-areas.*/
+    border-radius: 4rem 0 0 4rem;
+    overflow: auto;
+    overflow-x: hidden; /*Oculta lo que sobresale de la caja (aparece barra para desplazarse).*/ 
+    
+}
+
+.aside__user-info{
+    display: flex; /*Por defecto se muestran los contenidos en horizontal*/
+    flex-direction: column; /*Se coloca en columna*/
+    align-items: center; /*Para bloques*/
+    text-align: center; /*Para texto, no funcionan como el resto (display block*/
+    min-height: 100%;
+    min-width: 30rem;
+    background-color: var(--color-secondary);
+    color: var(--color-principal); /*Letras del menú*/
+}
+
+/*Elementos en blanco de la columna de información de usuario*/
+.user-info__name{
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: 0.7em; /*Editado*/
+    color: var(--color-principal);
+}
+
+.user-info__job{
+    font-size: 1.5rem;
+    font-weight: 200;
+    color: var(--color-principal);
+}
+
+.user-info__user-links{
+    margin-bottom: 3.6rem;
+}
+
+.user-links__social{
+    margin-top: 2rem;
+    text-align:center;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.social__option{
+    height:3rem;
+    width: 3rem;
+    line-height: 3.2rem; /*Centra el hover en el logo (linkedn, etc)*/
+    font-size: 1.8rem; /*Tamaño iconos*/
+    opacity: 0.9;
+    border-radius: 3rem; /*Redondea el hover*/ 
+    transition: all 300ms linear ease-in-out;
+}
+
+.social__option:hover{
+    opacity: 2;
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+
+
+/*Botón de descarga del currículum*/
+.user-info__buttons{
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.user-info__btn{
+    border: 2px solid var(--color-principal);
+    padding:3rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;;
+    color: var(--color-principal);
+    border-radius: 3.2rem;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.22); /*Sombra botón, se reduce 8px.*/
+}
+
+.user-info__btn:hover{
+    background-color: var(--color-principal);
+    color: var(--color-secondary);
+    transition: all 300ms ease-in-out; /*Suaviza*/
+}
+
+.user-info__footer{
+    position: absolute; /*Para que se quede fijo ahí*/
+    bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+
+/*Estilos para la imagen de perfil*/
+.user-info__container-image{
+    position: relative;
+    display: inline-block; /*Convertirlo en bloque aunque ya se había hecho en reset.css*/
+    width: 18rem;
+    margin-top: 7rem;
+    /* overflow: hidden; Para ocultar los picos de la foto que sobresalen.*/
+    z-index: 1;
+    
+}
+
+.user-info__image{
+    width: 100%;
+    background-color: var(--color-principal);
+    border: 0.3rem solid var(--color-principal);
+    border-radius: 20rem;
+    clip-path: circle(45%);
+}
+
+.user-info__container-image::after{ /*Agregar la sombra después de la img*/
+    content:"";
+    position: absolute;
+    top: 5%;
+    left: 9%;
+    z-index:-1; /*Estará detrás de la img*/
+    width:100%;
+    height: 100%;
+    background-image: -webkit-repeating-radial-gradient(center center, #fff, #fff 1px, transparent 0px, transparent 100%);
+    background-size: 1.2rem 1.2rem;
+    border-radius: 30rem;
+    opacity: 0.3;
+}
+
+/*Contenedor principal.*/
+.layout__content{
+    grid-area: content;  
+    height:100%; /*Necesaria para indicar min-height en .content__page*/
+    min-height: 100%;
+
+    background-color: var(--color-secondary);
+    border-radius: 0 10rem 10rem 0;
+} /*Caja de la estructura de la web*/
+
+.content__page{ /*Caja de contenido de la página*/
+    height: 100%;
+    min-height: 100%;
+    background-color: var(--color-principal);
+    border-radius: 3.2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Centra verticalmente.*/
+    justify-content: center; /*Centra horizontalmente.*/
+}
+
+.page__name{
+    font-size: 6rem;
+    margin-bottom: 1rem; /*Par aalejarlo de la profesión.*/
+}
+.page__job{
+    font-size: 2.1rem;
+    font-weight: lighter;
+    color: var(--color-subtitle);
+}
+
+/*Menú barra lateral derecha (inicilamente estuvo a la izquierda)*/
+.layout__menu{
+    display: block;
+    position: absolute; /*Para posicionarlo donde queramnos*/
+    top: 0;
+    right: -105px;
+    min-width: 11rem;
+    background-color: var(--color-transparent);
+    /*display: none !important;*/ /*ocultar menú en la izquierda.*/
+}
+
+.menu__list{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 60%;
+    min-height: 32rem; /*Altura del menú lateral derecho*/
+    padding: 2rem 0; /*Aplicado solo arriba y abajo para los extremos del menú*/
+    margin-left: 2.5rem; /*Aleja la barra hacia la izq*/
+
+    background-color: var(--color-principal);
+    box-shadow: 0 0 3rem -0.5rem rgba(0, 0, 0, 0.15);
+    border-radius: 6rem;
+
+}
+
+.menu__option{
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.menu__icon{
+    color: var(--color-icon);
+    font-size: 2.8rem;
+    transition: all 300ms ease-in-out;
+}
+
+.menu__option:hover .menu__icon,
+.menu__link--active .menu__icon{ /*Enlace seleccionado con color*/
+    color:var(--color-secondary);
+}
+
+
+.menu__overlay{ /*Texto*/
+    position:absolute; /*Para moverlo a nuestro 
+    antojo dentro de su caja.*/
+    right: 0px;
+    margin-top: -3rem; /*Ajustar la altura del texto al centro del icono*/
+    display: block;
+    opacity: 0; /*Hace desaparecer este menú*/
+    padding: 0.5rem 1rem;
+    color: var(--color-principal);
+    background-color: var(--color-secondary);
+    white-space: nowrap; /*Evita salto de línea: Sobre mí.*/
+    /*display: none; Para quitar el contenido y manejar 
+    los iconos del menú con mayor facilidad*/
+    transition: all 300ms ease-in-out;
+}
+
+.menu__option:hover .menu__overlay{
+    opacity: 1; /*Aparecen las descripciones.*/
+    right: 100%;
+}
+
+.social__icon{
+    color: var(--color-principal);
+}
+
+
+/* ESTILOS GENERALES (SOBRE MI Y OTRAS PÁGINAS)*/
+.content__about,
+.content__resume,
+.content__portfolio,
+.content__blog,
+.content__contact{
+    height: 100%; /*Se deben fijar alturas para que aparezca el scroll*/
+    min-height: 100%;
+    padding: 6rem;
+    padding-right: 3rem;
+    overflow:auto; /*Se muestra scroll dentro de la caja*/
+    
+    /*Los estilos provenientes de .content__page, se solapaban, por lo que deben hacerse ajustes, en este caso
+    cambiar display flex por block.*/
+    display: block;
+}
+
+
+.about__header,
+.resume__header,
+.portfolio__header,
+.blog__header,
+.contact__header{
+    display: inline-block; /*Se añade para que se vea el elemento after cerca del mi. 
+    En block habría que reducir el tamaño del contenedor.*/
+    margin-bottom: 4.5rem;
+}
+
+.about__title,
+.resume__title,
+.portfolio__title,
+.blog__title,
+.contact__title{
+    font-size: 3.2rem;
+    position: relative; 
+}
+
+/*Puntos cerca del título.*/
+.about__title::after,
+.resume__title::after,
+.portfolio__title::after,
+.blog__title::after,
+.contact__title::after{
+    content: "";
+    position: absolute; /*Para moverlo a nuestro antojo*/
+    top:20px;
+    right: -25px;
+    width: 50px;
+    height: 30px; /*Width y height son necesarios para que se muestre el webkit.*/
+    background-image: -webkit-repeating-radial-gradient(center center, var(--color-secondary), var(--color-secondary) 1px, transparent 0px, transparent 100%);
+    background-size: 6px 6px;
+
+}
+
+
+
+.title__color,
+.subtitle__color{
+    color:  var(--color-secondary);
+}
+
+/* INFORMACIÓN PERSONAL.*/
+.about__personal-info{
+    display: flex; /*Distribuye las cajas una al lado de otra.*/
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.personal-info__bio{
+    flex-basis: 56%; /*El contenedor de la descirpción ocupara menos.*/
+}
+
+.personal-info__description{
+    font-size: 1.5rem;
+    line-height: 2.4rem;
+    margin-bottom: 2rem; /*Inicialmente solo existía un párrafo pero al añadir más agrego un margen de separación.*/
+}
+
+.personal-info__data{
+    flex-basis: 44%;
+    padding: 0 1.5rem; /*Márgenes para el texto del contenedor.*/
+}
+
+.personal-info__option{
+    margin-bottom: 1rem; /*Separa edad, país, etc.*/
+}
+
+.personal-info__title{
+    margin-right: 0.5rem; /*Separación del título.*/
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+/* ESTILOS GENERALES: Estilos compartidos about de secciones: habilidades, reseñas, etc*/
+.about__services,
+.about__reviews,
+.about__clients,
+.about__extra{
+    width: 100%;
+    margin-bottom: 3rem;
+}
+
+.services__header,
+.reviews__header,
+.clients__header,
+.extra__header,
+.resume__header,
+.resume__subheader,
+.contact_form-header{
+    display: inline-block;
+    padding-right: 1.2rem; /*Desplazará levemente la sombra del título, será necesario right.*/
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.services__title,
+.reviews__title,
+.clients__title,
+.extra__title,
+.resume__subtitle,
+.form-header__title{
+    font-size: 2.1rem;
+
+}
+
+.services__title::after,
+.reviews__title::after,
+.clients__title::after,
+.extra__title::after,
+.resume__subtitle::after,
+.form-header__title::after{
+    content: "";
+    position: absolute; /*Para moverlo a nuestro antojo*/
+    top:15px;
+    right: 0px;
+    width: 30px;
+    height: 20px; /*Width y height son necesarios para que se muestre el webkit.*/
+    background-image: -webkit-repeating-radial-gradient(center center, var(--color-secondary), var(--color-secondary) 1px, transparent 0px, transparent 100%);
+    background-size: 6px 6px;
+    opacity:0.5;
+}
+
+/*SERVICIOS / HABILIDADES*/
+.service__real-icon{
+    color: var(--color-secondary);
+    font-size: 3.8rem;
+}
+
+.services__container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.services__service{
+    flex-basis: calc(50% - 3rem); /*Pasan a distribuirse en 2 columnas.*/
+    margin-right: 3rem;
+    margin-bottom: 2.5rem; /*Al agregar los margins deberemos disminuir el porcentajee de flex-basis del 50% al x%.*/
+}
+
+.service__description{
+    font-size: 1.5rem;
+    text-align: justify; /*Las descripciones se mostrarán más alineadas.*/
+}
+
+
+/*REVIEWS*/
+
+.reviews__content{
+    width: 100%;
+    display: flex;
+    flex-direction: row; /*Fila*/
+    flex-wrap: wrap; /*Para lograr mostrar varias filas según el espacio.*/
+}
+
+.reviews__review{
+    flex-basis: calc(50% - 2.5rem);
+
+    border: 2px solid var(--color-border-reviews);
+    border-radius: 2rem;
+    padding-top: 0rem;
+    padding-right: 2.5rem;
+    padding-left: 2.5rem;
+    padding-bottom: 1.5rem;
+    margin-right: 2.5rem; /*Separación de los elementos.*/
+    margin-top: 4.5rem;
+    margin-bottom:10rem;
+    /*Utilizado en la transición de hover*/
+    transition: all 300ms ease-in-out;
+}
+
+/*Hover para levantar las tarjetas de reviews y extra*/
+.reviews__review:hover,
+.extra__info:hover{
+    box-shadow: 0 10px 24px -5px rgba(0, 0, 0, 0.15);
+    transform: translateY(-1rem);
+}
+
+.review__image{
+    max-width: 9rem;
+    max-height: 9rem;
+    margin: 0 auto;
+    margin-top: -4.5rem;
+    margin-bottom: 2rem;
+    border-radius: 9rem; /*Redondea la foto*/
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.25); /*x y difuminado quitar-extensión color*/
+    opacity: 0.5;
+}
+
+.review__description{
+    margin-bottom: 1rem;
+}
+
+.review__text{
+  font-size: 1.5rem;
+  line-height: 2.4rem;
+}
+
+.review__author{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row; /*Símbolo de reseña a un lado y no debajo.*/
+    justify-content: space-between;
+}
+
+.review__name{
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.review__company{
+    color: var(--color-company);
+    font-weight: 300; /*Más delgadez.*/
+    font-size: 1.3rem;
+}
+
+.review__icon{
+    font-size: 4rem;
+    opacity: 0.5;
+    color: var(--color-secondary);
+}
+
+
+/*CLIENTES.*/
+.about__clients{
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.clients__header{
+    margin-bottom: 3rem;
+}
+
+.clients__container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.clients__link{
+    display: block;
+    width: 100%;
+    opacity: 0.5;
+}
+
+.clients__link:hover{
+    opacity: 0.9;
+    transition: all 300ms linear;
+}
+
+.clients__image{
+    width: 150px;
+    height: 90px;
+    padding: 1.5rem;
+}
+
+/*Información extra.*/
+.extra__container{
+    width: 100%;
+    display: flex; /*Elementos en fila.*/
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap; /*En caso de encontrar más elementos,
+    se podicionarán en la siguiente línea.*/
+}
+
+.extra__info{
+    flex-basis: 30%;
+    padding:2.5rem 1rem;
+    border: 2px solid var(--color-border-reviews);
+    border-radius: 1rem;
+    text-align: center;
+    transition: all 300ms ease-in-out;
+} /*Se añadirá una transición en*/
+
+.extra__info:hover{
+    transform: translateY(-0.5rem);
+}
+
+.extra__icon{
+    font-size: 3.3rem;
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+.extra__subtitle{
+    font-size: 1.5rem;
+    margin: 1.5rem;
+}
+
+.extra__quantity{
+    display: block;
+    font-size: 3.6rem;
+    margin:1.5rem 1rem;
+    margin-bottom: 0;
+    line-height: 5rem;
+    color: var(--color-subtitle);
+}
+
+/*CURRICULUM*/
+
+.resume__container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.resume__left{
+    flex-basis: 58%;
+    margin-right: 1.5rem;
+}
+
+.resume__right{
+    flex-basis: 41%;
+}
+
+.resume__timelines{
+    margin-bottom: 5rem;
+}
+
+.timelines__timeline{ /*Fila con año, divisor, info*/
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.timeline__header{
+    flex-basis: 30%;
+    text-align: right;
+    padding-right: 2.5rem;
+}
+
+.timeline__year{
+    margin: 3px 0;
+    line-height: 1.9rem;
+    font-size: 1.4rem;
+}
+
+.timeline__company{
+    display: block;
+    font-size: 1.3rem;
+    font-weight: lighter;
+    color: var(--color-company);
+
+}
+
+.timeline__description{
+    width: 70%;
+    padding-left: 2.5rem;
+    padding-right: 1.5rem;
+}
+
+.timeline__title{
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+}
+
+.timeline_text{
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+
+.timeline__divider{
+    position: absolute; /*Para unir las líneas que aparecen naturalmente dentro de ambos contenedores*/
+    top:0;
+    left: 30%;
+    bottom: -18px; /*Une las dos líneas y al combinarse con top se expande.*/
+    width: 1px;
+    height: auto; /*height: auto; permite que se expanda. Si se usa 100% se limita a su contenedor.*/
+    background-color: var(--color-scrollbar);
+}
+
+/*Círculo de timeline.*/
+.timeline__divider::before{
+    content:"";
+    position: absolute;
+    margin-top: 0.4rem;
+    margin-left: -0.8rem;
+    width: 1.7rem;
+    height: 1.7rem;
+    background-color: var(--color-secondary);
+    border-radius: 10rem;
+    opacity: 0.25;
+}
+
+.timeline__divider::after{
+    content:"";
+    position: absolute;
+    margin-top: 0.8rem;
+    margin-left: -0.4rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    background-color: var(--color-principal);
+    border-radius: 10rem;
+    border: 2px solid var(--color-secondary);
+    opacity: 1;
+}
+
+
+/*Currículum derecha.*/
+.resume__right{
+    flex-basis: 41%;
+    padding: 0 1.5rem;
+}
+
+.resume__skills{
+    width: 100%;
+    margin-bottom:0.4rem;
+}
+
+.skills__title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.skills__text{
+    font-size: 1.3rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.skills__number{
+    font-size: 1.1rem;
+    line-height: 1.4rem;
+    margin-bottom: 0.4rem;
+    color: var(--color-subtitle);
+}
+
+.skills__progressbar{
+    /*width: 100%; No es necesario si no se pone display: inline-block;*/
+    height: 1rem;
+    border: 1px solid var(--color-secondary);
+    border-radius: 1rem;
+    background-color: var(--color-principal);
+    margin-bottom: 1.5rem;
+    /*display: inline-block; *//*Para mostrar más márgenes.*/
+
+}
+
+.skills__percentage{
+    width: 40%;
+    height: 0.8rem;
+    background-color: var(--color-secondary);
+    border: 2px solid var(--color-principal);
+    border-radius: 1rem;
+}
+
+/*Modificadores de procentaje para el nivel de la progressbar.*/
+.skills__percentage--p1{ width: 10%; }
+.skills__percentage--p2{ width: 20%; }
+.skills__percentage--p3{ width: 30%; }
+.skills__percentage--p4{ width: 40%; }
+.skills__percentage--p5{ width: 50%; }
+.skills__percentage--p6{ width: 60%; }
+.skills__percentage--p7{ width: 70%; }
+.skills__percentage--p8{ width: 80%; }
+.skills__percentage--p9{ width: 90%; }
+.skills__percentage--p10{ width: 100%; }
+
+.knowledges__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap; /*No se genere una fila larga sino varias*/
+}
+
+.knowledges__option{
+    padding: 0.4rem 1rem;
+    margin: 0.3rem;
+    font-size: 1.4rem;
+    background-color: var(--color-secondary);
+    border-radius: 0.3rem;
+    color: var(--color-principal);
+}
+
+.certificates__container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem; /*Espaciado entre los certificates*/
+}
+
+.certificates__certificate{
+    flex-basis: calc(50% - 1.5rem);
+    border: 1px solid var(--color-border-reviews);
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: row;
+}
+
+.certificate__logo{
+    width: 12rem;
+    height: 100%;
+    padding: 2rem;
+    background-color: var(--color-background-certificate);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.certificate__image{
+    width: 100%;
+}
+
+.certificates__content{
+    width: 100%; /*Debe definirse o por defecto no se heredará.*/
+    padding: 2rem 2.5rem;
+}
+
+.certificate__title{
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.certificate__id{
+    display: block;
+    margin-bottom: 0.3rem;
+    font-size: 1.3rem;
+    color: var(--color-subtitle);
+
+}
+
+.certificate__date{
+    font-size: 1rem;
+    color: var(--color-subtitle);
+    opacity: 0.9;
+}
+
+
+/*PORTFOLIO*/
+
+.portfolio__navbar{
+    margin-bottom: 3rem;
+}
+
+.portfolio__menu{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.portfolio__link{
+    color: var(--color-subtitle);
+    cursor: pointer;
+}
+
+.portfolio__link:hover{ 
+    color: var(--color-secondary);
+    text-shadow: 0 0 0.5px rgba(0, 0, 0, 0.25);
+}
+
+.portfolio__option{
+    font-size: 1.4rem;
+}
+
+.portfolio__option--active{
+    opacity: 1;
+    font-weight: bold;
+}
+
+.portfolio__gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gallery__item{
+    position: relative; /*Límite del icono y categoría.*/
+    flex-basis: 33%;
+    padding: 0.7rem;
+}
+
+/*Zoom tras pasar el ratón en las imágenes.*/
+.gallery__container-image{
+    height:55%;
+    overflow: hidden; /*Para lograr que el zoom no sobresalga del contenedor.*/
+}
+
+.gallery__image{
+    transition: all 300ms ease-in-out;
+}
+
+.gallery__item:hover .gallery__image{
+    transform: scale(1.1); /*Zoom*/
+}
+
+.gallery__title{
+    font-size: 1.6rem;
+    padding: 1.5rem 0;
+    font-weight: bold;
+}
+
+
+/*Categoría e iconos en las esquinas superiores de las imágenes.*/
+.gallery__icon{
+    opacity:0; /*Oculto*/
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 3rem; /*Coloca horizontalmente en la mitad*/
+    background-color: var(--color-principal);
+    color: var(--color-secondary);
+    transition: all 450ms ease-in-out;
+}
+
+.gallery__category{
+    opacity:0; /*Oculto*/
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    padding: 0.2rem 0.7rem;
+    font-size: 1.1rem;
+
+    background-color: var(--color-principal);
+    color: var(--color-text);
+
+}
+
+.gallery__item:hover .gallery__icon,
+.gallery__item:hover .gallery__category
+{
+    opacity: 1; /*Aparecerá con su transición, etc.*/
+}
+
+/*BLOG*/
+
+.blog__articles{
+    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.articles__article{
+    flex-basis: 50%;
+    padding: 0 1.5rem;
+    padding-bottom: 3.5rem;
+}
+
+.article__top{
+    position: relative;
+    overflow: hidden;
+}
+
+.article__category{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    font-size: 1.1rem;
+    padding: 0.1rem 0.7rem;
+    line-height:   2rem;
+    background-color: var(--color-principal);
+    color: var(--color-text);
+    z-index: 3;
+}
+
+.article__mask{
+    width:100%;
+    height: 18.5rem; /*Iguala la altura de las imágenes.*/
+    overflow: hidden;
+}
+
+.article__image{
+    display: block;
+    z-index: 1; /*Así la etiqueta estarña por encima.*/
+    transition: all 300ms ease-in-out;
+}
+
+.article__top:hover .article__image{
+    transform: scale(1.1);
+}
+
+.article__logo{
+    transition: all 200ms ease-in-out;
+    opacity: 0;
+}
+
+.article__icon{
+    position: absolute;
+    width: 4.4rem;
+    top: calc(50% - 2.2rem); /*Con calc se logra centrar el icono*/
+    left:calc(50% - 2.2rem);
+    font-size: 4.4rem;
+    text-align: center;
+    color: var(--color-principal);
+}
+
+.article__top:hover .article__logo{
+    opacity: 1;
+}
+
+.article__bottom{
+    margin: 0;
+    padding: 2.1rem;
+    padding-top: 1.5rem;
+    border: 0.1rem solid var(--color-border-reviews);
+    border-top: 0;
+}
+
+.article__date{
+    display: block;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: var(--color-subtitle);
+}
+
+.article__title{
+    font-size: 1.8rem;
+}
+
+/*CONTACTO*/
+.contact__container{
+    display: flex;
+    flex-direction: row;
+}
+
+.contact__info{
+    flex-basis: 33%;
+    padding: 0 1.5rem;
+}
+.contact__data{
+    width: 100%;
+    margin-bottom: 1.5rem;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-color: var(--color-background-contact);
+    border: 1px solid var(--color-border-reviews);
+}
+
+.contact__icon{
+    font-size: 3.3rem;
+    color: var(--color-secondary);
+}
+
+.contact__form-box{
+    flex-basis: 66%;
+    padding: 0.1 1.5rem;
+}
+
+.contact__subtitle{
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.form__container{
+    display: flex;
+    flex-direction: row;
+}
+
+.form__left{
+    flex-basis: 47%;
+    margin-right: 1.5rem;
+}
+
+.form__group{
+    position: relative; /*Aterará el funcionamiento natural.*/
+    margin-bottom: 2.5rem;
+}
+
+.form__input{
+    position: relative;
+    width: 100%;
+    height: 4.2rem;
+    display: block;
+    border: 0.2rem solid var(--color-border-reviews);
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 1rem 1.2rem;
+    outline: none; /*Elimina remarcado del navegador.*/
+    box-shadow: 0 1rem 1rem -8px rgba(0, 0, 0, 0.10);
+    background-color: transparent;
+}
+
+.form__input:focus{ /*Al pulsar en el formulario*/
+    border: 0.2rem solid var(--color-secondary);
+}
+
+.form__label{
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    z-index: 1;
+    color: var(--color-company);
+    transition: all 300ms ease-in-out;
+    pointer-events: none; /*Para que label no interfiera en el evento de input (click).*/
+}
+
+.form__input:focus~label,
+.form__input:not(:placeholder-shown)~label{ /*input:not() -> Cuanbdo haya contenido en input el label continuará fuera.*/
+    top: -2rem;
+    left: 0;
+    z-index: 1;
+    font-size: 1.3rem;
+    color: var(--color-secondary);
+}
+
+/*Se ocultan los placeholders.*/
+.form__input::-webkit-input-placeholder{
+    color:transparent;
+}
+
+.form__input::-moz-placeholder{
+    color:transparent;
+}
+
+.form__right{
+    flex-basis: 50%;
+    max-width: 50%;
+    max-height: 100%;
+}
+
+.form__group--textarea{
+    height: 100%; /*Importante para poder extender la altura todo lo posible.*/
+}
+.form__input--textarea{
+    display:block;
+    resize: none; /*El tamaño del textarea no podrá ser modificado por el usuario como ocurría inicialmente.*/
+    height: 100%; /*Se expande ligeramente con auto y ya si no se ha tratado la caja madre en primer lugar.*/
+}
+
+.form__button{
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    border: 0.2rem solid var(--color-secondary);
+    color: var(--color-titles);
+    background-color: var(--color-principal);
+    border-radius: 3rem;
+    box-shadow: 0 1rem 1rem -8px rgba(0, 0, 0, 0.22);
+    transition: all 300ms linear;
+    cursor: pointer;
+}
+
+.form__button:hover{
+    background-color: var(--color-secondary);
+    color: var(--color-principal);
+}
+
+.contact__map{
+    width: 100%;
+    min-height: 15rem;
+    margin-bottom: 3.5rem;
+    overflow: hidden;
+}
+
+.contact__iframe{
+    width: 100%; /*Se extenderá el mapa horizontalmente sin problema.*/
+    height: 14rem;
+}

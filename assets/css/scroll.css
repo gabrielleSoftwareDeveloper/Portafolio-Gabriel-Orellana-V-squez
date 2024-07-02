@@ -1,0 +1,80 @@
+:root{
+   --color-scrollbar: #D3D3D3;
+   --color-background-scrollbar: gray;
+}
+
+
+
+/*Scroll para chrome*/
+.content__page::-webkit-scrollbar{
+    width: 25px;
+    background: transparent; /*Color del espacio por la que se desliza la barra.*/
+}
+
+.content__page::-webkit-scrollbar-thumb{
+    border: 10px solid transparent; /*Color del borde de la barra deslizante*/
+    border-radius: 40px;
+}
+
+.content__page:hover::-webkit-scrollbar-thumb{
+    /*Color de la barra mientras pasamos por encima.*/
+    box-shadow: inset 0 0 0 10px var(--color-scrollbar);
+}
+
+.content__page:hover::-webkit-scrollbar-thumb:hover{
+    /*Color de la barra mientras se pulsa.*/
+    border:8px solid transparent;
+    box-shadow: inset 0 0 0 10px var(--color-secondary);
+}
+
+.content__page::-webkit-scrollbar-track{
+    /*-track: se trata de la barra completa. De esta manera se puede mover.*/
+    background-color: transparent;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+
+/*Scroll para Mozzila Firefox
+.content__page{
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-scrollbar) transparent;
+}
+*/
+
+
+/*Scroll derecho (icono foto, etc) para chrome*/
+.layout__aside::-webkit-scrollbar{
+    width: 25px;
+    background: var(--color-secondary); /*Color del espacio por la que se desliza la barra.*/
+}
+
+.layout__aside::-webkit-scrollbar-thumb{
+    border: 10px solid transparent; /*Color del borde de la barra deslizante*/
+    border-radius: 40px;
+}
+
+.layout__aside:hover::-webkit-scrollbar-thumb{
+    /*Color de la barra mientras pasamos por encima.*/
+    box-shadow: inset 0 0 0 10px var(--color-principal);
+}
+
+.layout__aside:hover::-webkit-scrollbar-thumb:hover{
+    /*Color de la barra mientras se pulsa.*/
+    border:8px solid transparent;
+    box-shadow: inset 0 0 0 10px var(--color-principal);
+}
+
+.layout__aside::-webkit-scrollbar-track{
+    /*-track: se trata de la barra completa. De esta manera se puede mover.*/
+    background-color: transparent;
+    margin:40px 0;
+}
+
+
+/*Scroll para Mozzila Firefox
+.layout__aside{
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-scrollbar) var(--color-secondary);
+}
+*/

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/scroll.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css"/>
+
+     <!-- Scripts -->
+     <script src="assets/js/menu.js" defer></script>
+
+    <title>Portafolio - Gabriel Orellana Vásquez</title>
+</head>
+<body>
+
+    <!-- Layour principal, lo contendrá todo.-->
+    <div class="layout">
+        <!-- Barra lateral (info de usuario).-->
+        <aside class="layout__aside">
+                <section class="aside__user-info">
+                    <!--Información general del usuario.-->
+                    <div class="user-info__general">
+                            <div class="user-info__container-image">
+                                <img src="assets/img/default-user.jpg" alt="" class="user-info__image"/>
+                                <!-- La sombra de la imagen se agrega aquí con ::after-->
+                            </div>
+                            <h2 class="user-info__name">Gabriel Orellana Vásquez</h2>
+                            <div class="user-info__job">Desarrollador Web</div>
+                    </div>
+                    <!--Menú de navegación.-->
+                    <nav class="layout__menu">
+                        <ul class="menu__list">
+                            <li class="menu__option">
+                                <a href="index.html" class="menu__link">
+                                    <i class="menu__icon fa-solid fa-house"></i>
+                                    <span class="menu__overlay">Home</span>
+                                </a>                            
+                            </li>
+
+                            <li class="menu__option">
+                                <a href="sobre-mi.html" class="menu__link menu__link--active">
+                                    <i class="menu__icon fa-solid fa-user"></i>
+                                    <span class="menu__overlay">Sobre mí</span>
+                                </a>                            
+                            </li>
+
+                            <li class="menu__option">
+                                <a href="curriculum.html" class="menu__link">
+                                    <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                    <span class="menu__overlay">Curriculum</span>
+                                </a>                            
+                            </li>
+
+                            <li class="menu__option">
+                                <a href="portafolio.html" class="menu__link">
+                                    <i class="menu__icon fa-solid fa-briefcase"></i>
+                                    <span class="menu__overlay">Portafolio</span>
+                                </a>
+                            </li>
+
+                            <li class="menu__option">
+                                <a href="blog.html" class="menu__link">
+                                    <i class="menu__icon fa-solid fa-book"></i>
+                                    <span class="menu__overlay">Blog</span>
+                                </a>                            
+                            </li>
+
+                            <li class="menu__option">
+                                <a href="contacto.html" class="menu__link">
+                                    <i class="menu__icon fa-solid fa-envelope"></i>
+                                    <span class="menu__overlay">Contacto</span>
+                                </a>                            
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!--Links a redes sociales.-->
+                    <div class="user-info__user-links">
+
+                        <ul class="user-links__social">
+                            <li class="social__option">
+                                <a href="https://www.linkedin.com/in/gabriel-orellana-vasquez/" class="social__link" target="_blank">
+                                    <i class="social__icon fa-brands fa-linkedin"></i>
+                                </a>
+                            </li>
+
+                            <li class="social__option">
+                                <a href="https://github.com/gabrielleSoftwareDeveloper" class="social__link" target="_blank">
+                                    <i class="social__icon fa-brands fa-github"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <!--Botón del currículum.-->
+                    <div class="user-info__buttons">
+                        <a href="#" class="user-info__btn">
+                            Descargar CV
+                        </a>
+                    </div>
+
+                    <!--Pie de página.-->
+                    <footer class="user-info__footer">
+                       &copy; 2024 Gabriel Orellana Vásquez 
+                    </footer>
+
+                </section>
+        </aside>
+
+        <!-- Menú responsive. -->
+        <div class="layout__menu-toggle">
+            <i class="menu-togle__icon fa-solid fa-bars"></i>
+            <i class="menu-togle__icon fa-solid fa-xmark"></i>
+        </div>
+
+        <!-- Contenido principal-->
+        <main class="layout__content">
+            <!-- Este contenido cambia en cada página asociada al sitio web.-->
+            <section class="content__page content__about">
+                
+                <header class="about__header">
+                    <h1 class="about__title">Sobre <span class="title__color">mí</span></h1>
+                </header>
+
+                <!-- Información personal. -->
+                <section class="about__personal-info">
+
+                    <article class="personal-info__bio">
+                        <p class="personal-info__description">
+                            Actualmente estoy trabajando en el Ministerio de Defensa como desarrollador tras haber finalizado mis estudios en el 
+                            Ciclo Superior de Desarrollo de Aplicaciones Web con la idea de crecer en el área de desarrollo de software.
+                        </p>
+
+                        <p class="personal-info__description">
+                            Decidí sumergirme en el mundo tecnológico con resultados positivos y puedo asegurar que me encuentro 
+                            en una zona de confort donde puedo aplicar varias herramientas lógicas que he ido puliendo a lo largo de los años en otros 
+                            sectores y, por supuesto, aprendí diferentes lenguajes de manera satisfactoria junto a su utilización eficiente en mi tiempo 
+                            de estudio dentro del grado.
+                        </p>
+
+                        <p class="personal-info__description">
+                            Me considero una persona multidisciplinar con inquietudes variadas que lleva por lema aprender y desarrollarse en los ámbitos 
+                            que despiertan su curiosidad, siendo siempre metódico y profesional en el puesto laboral para lograr la excelencia en todo momento.
+                        </p>
+                    </article>
+    
+                    <div class="personal-info__data">
+                        <ul class="personal-info__list">
+                            <li class="personal-info__option">
+                                <span class="personal-info__title">País</span>
+                                <span class="personal-info__value">España</span>
+                            </li>
+    
+                            <li class="personal-info__option">
+                                <span class="personal-info__title">Comunidad</span>
+                                <span class="personal-info__value">Madrid</span>
+                            </li>
+    
+                            <li class="personal-info__option">
+                                <span class="personal-info__title">Municipio</span>
+                                <span class="personal-info__value">Getafe</span>
+                            </li>
+    
+                            <li class="personal-info__option">
+                                <span class="personal-info__title">Correo electrónico</span>
+                                <span class="personal-info__value">gabriel.orevas@gmail.com</span>
+                            </li>
+    
+                            <li class="personal-info__option">
+                                <span class="personal-info__title">Teléfono</span>
+                                <span class="personal-info__value">654 65 04 92</span>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <!-- Servicios/habilidades. -->
+                <section class="about__services">
+                    <header class="services__header">
+                        <h2 class="services__title">
+                            Mis <span class="title__color">habilidades</span>
+                        </h2>
+                    </header>
+
+                    <!-- Educación. -->
+                    <div class="services__container">
+
+                        <article class="services__service">
+                            <div class="service__icon">
+                                <i class="service__real-icon fa-solid fa-code"></i>
+                            </div>
+
+                            <div class="service__content">
+                                <h3 class="service__title">Programación</h3>
+                                <p class="service__description">
+                                    Mi piedra angular es la programación, arte que he ido puliendo tanto en el grado de DAW como por mi propia cuenta, enfrascándome en diferentes proyectos que me han ayudado a tener más destreza en la materia.
+                                    No me cierro a un campo concreto dentro del área, he estado en diferentes sectores así que siempre tengo la mente abierta a aprender con entusiasmo múltiples tecnologías.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="services__service">
+                            <div class="service__icon">
+                                <i class="service__real-icon fa-solid fa-palette"></i>
+                            </div>
+
+                            <div class="service__content">
+                                <h3 class="service__title">Diseño UI/UX</h3>
+                                <p class="service__description">
+                                    Mi incursión en el campo audiovisual relacionado con múltiples procesos creativos (modelaje, estilismo, 
+                                    fotografía, creación de conceptos, ...) y mi reciente trabajo como diseñador y desarrollador web en el Estado Mayor 
+                                    de la Defensa me han permitido ser capaz de tener buen criterio identificando áreas funcionales, mejorando experiencias 
+                                    de usuario y creando interfaces atractivas.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="services__service">
+                            <div class="service__icon">
+                                <i class="service__real-icon fa-solid fa-people-group"></i>
+                            </div>
+
+                            <div class="service__content">
+                                <h3 class="service__title">Trabajo en equipo</h3>
+                                <p class="service__description">
+                                    Gracias a mis diferentes ocupaciones e inquietudes (dietista, técnico de farmacia, modelo, atención al público...) he desarrollado buenas dotes sociales que me permiten 
+                                    trabajar en sintonía con un equipo diverso y, por supuesto, disfrutar con ello.
+                                    Creo en el apoyo entre compañerxs tanto en el ámbito laboral como en el emocional pues, finalmente, esto nos permite funcionar mejor en nuestros puestos de trabajo.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="services__service">
+                            <div class="service__icon">
+                                <i class="service__real-icon fa-solid fa-chalkboard-user"></i>
+                            </div>
+
+                            <div class="service__content">
+                                <h3 class="service__title">Buena oratoria</h3>
+                                <p class="service__description">
+                                    A la hora de comunicarme con los demás tengo la capacidad de dejar claras mis impresiones 
+                                    de forma asertiva, así como, de entender y comprender al resto del equipo o clientes, para lograr un abordaje amable 
+                                    çde cualquier temática referente a mi labor. En mi experiencia laboral en si misma he tratado con un gran número de personas sobre temas diversos para el desarrollo de aplicativos eficientes, diseño de interfaces...
+                                </p>
+                            </div>
+                        </article>
+
+                    </div>
+                </section>
+
+                <!-- Reviews. -->
+                <section class="about_reviews">
+                    <header class="reviews__header">
+                        <h2 class="reviews__title">Reseñas</h2>
+                    </header>
+                
+                    <div class="reviews__content">
+                        <article class="reviews__review">
+                            <div class="review__img-container">
+                                <img src="assets/img/testimonio1" class="review__image" alt="Cara de un cliente"/>
+                            </div>
+                            
+                            <div class="review__description">
+                                <p class="review__text">
+                                    ¡Increíble trabajo en la página web de sellos! Logró una navegación fluida y atractiva. Cada sección está organizada con gran precisión, y el diseño es tanto estético como funcional. Además solucionó e incorporó
+                                    funcionalidades en el back. ¡Muy recomendado!"
+                                </p>
+                            </div>
+
+                            <div class="review__author">
+                                <div class="review__author-info">
+                                    <h4 class="review__name">Jorge Moreno</h4>
+                                    <h5 class="review__company">Sellos Moreno</h5>
+                                </div>
+
+                                <div class="review__author-icon">
+                                    <i class="review__icon fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            
+                        </article>
+
+                        <article class="reviews__review">
+                            <div class="review__img-container">
+                                <img src="assets/img/testimonio1" class="review__image" alt="Cara de un cliente"/>
+                            </div>
+                            
+                            <div class="review__description">
+                                <p class="review__text">
+                                    ¡Excelente trabajo en la página web de SharePoint! La maquetación es perfecta, facilitando una navegación intuitiva y eficiente. Todo está organizado de manera lógica y atractiva, mejorando significativamente la experiencia del usuario.
+                                </p>
+                            </div>
+
+                            <div class="review__author">
+                                <div class="review__author-info">
+                                    <h4 class="review__name">Enrique García</h4>
+                                    <h5 class="review__company">Ministerio de Defensa</h5>
+                                </div>
+
+                                <div class="review__author-icon">
+                                    <i class="review__icon fa-solid fa-quote-right"></i>
+                                </div>
+                            </div>
+                            
+                        </article>
+                    </div>
+                
+                </section>
+
+                <!-- Clientes. -->
+                <section class="about__clients">
+                    <header class="clients__header">
+                        <h2 class="clients__title">Clientes</h2>
+                    </header>
+
+                    <div class="clients__container">
+                        <article class="clients__item">
+                            <a href="#" class="clients__link">
+                                    <img src="assets/img/cliente-1.png" class="clients__image" alt=""/>
+                            </a>                   
+                        </article>
+
+                        <article class="clients__item"> <!--Añadir SM solutions.-->
+                            <a href="#" class="clients__link">
+                                    <img src="assets/img/cliente-2.png" class="clients__image" alt=""/>
+                            </a>                   
+                        </article>
+
+                        <article class="clients__item">
+                            <a href="#" class="clients__link">
+                                    <img src="assets/img/cliente-3.png" class="clients__image" alt=""/>
+                            </a>                   
+                        </article>
+
+                    </div>
+                </section>
+
+                <!-- EXtra-->
+                <section class="about__extra">
+                    <header class="extra__header">
+                        <h2 class="extra__title">Información <span class="title__color">extra</span></h2>
+                    </header>
+
+                    <div class="extra__container">
+                        <article class="extra__info">
+                            <i class="extra__icon fa-solid fa-heart"></i>
+                            <h4 class="extra__subtitle">Ganas de aprender</h4>
+                            <span class="extra__quantity">100%</span>
+                        </article>
+
+                        <article class="extra__info">
+                            <i class="extra__icon fa-solid fa-school"></i>
+                            <h4 class="extra__subtitle">Autodidacta</h4>
+                            <span class="extra__quantity">100%</span>
+                        </article>
+
+                        <article class="extra__info">
+                            <i class="extra__icon fa-solid fa-star"></i>
+                            <h4 class="extra__subtitle">Perfeccionista</h4>
+                            <span class="extra__quantity">100%</span>
+                        </article>
+
+                    </div>
+                </section>
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
+
+

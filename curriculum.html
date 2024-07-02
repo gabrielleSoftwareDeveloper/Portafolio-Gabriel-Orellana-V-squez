@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- Estilos -->
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"/>
+    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/scroll.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css"/>
+
+     <!-- Scripts -->
+     <script src="assets/js/menu.js" defer></script>
+     
+    <title>Portafolio - Gabriel Orellana Vásquez</title>
+</head>
+<body>
+
+    <!-- Layour principal, lo contendrá todo.-->
+    <div class="layout">
+        
+        <!-- Barra lateral (info de usuario).-->
+        <aside class="layout__aside">
+                <section class="aside__user-info">
+                    <!--Información general del usuario.-->
+                    <div class="user-info__general">
+                            <div class="user-info__container-image">
+                                <img src="assets/img/default-user.jpg" alt="" class="user-info__image"/>
+                                <!-- La sombra de la imagen se agrega aquí con ::after-->
+                            </div>
+                            <h2 class="user-info__name">Gabriel Orellana Vásquez</h2>
+                            <div class="user-info__job">Desarrollador Web</div>
+                    </div>
+                    <!--Menú de navegación.-->
+                    <nav class="layout__menu">
+                        <ul class="menu__list">
+                            <li class="menu__option">
+                                <a href="index.html" class="menu__link">
+                                    <i class="menu__icon fa-solid fa-house"></i>
+                                    <span class="menu__overlay">Home</span>
+                                </a>                            
+                            </li>
+
+                            <li class="menu__option">
+                                <a href="sobre-mi.html" class="menu__link">
+                                    <i class="menu__icon fa-solid fa-user"></i>
+                                    <span class="menu__overlay">Sobre mí</span>
+                                </a>                            
+                            </li>
+
+                            <li class="menu__option">
+                                <a href="curriculum.html" class="menu__link menu__link--active">
+                                    <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                    <span class="menu__overlay">Curriculum</span>
+                                </a>                            
+                            </li>
+
+                            <li class="menu__option">
+                                <a href="portafolio.html" class="menu__link">
+                                    <i class="menu__icon fa-solid fa-briefcase"></i>
+                                    <span class="menu__overlay">Portafolio</span>
+                                </a>
+                            </li>
+
+                            <li class="menu__option">
+                                <a href="blog.html" class="menu__link">
+                                    <i class="menu__icon fa-solid fa-book"></i>
+                                    <span class="menu__overlay">Blog</span>
+                                </a>                            
+                            </li>
+
+                            <li class="menu__option">
+                                <a href="contacto.html" class="menu__link">
+                                    <i class="menu__icon fa-solid fa-envelope"></i>
+                                    <span class="menu__overlay">Contacto</span>
+                                </a>                            
+                            </li>
+                        </ul>
+                    </nav>
+
+                    <!--Links a redes sociales.-->
+                    <div class="user-info__user-links">
+
+                        <ul class="user-links__social">
+                            <li class="social__option">
+                                <a href="https://www.linkedin.com/in/gabriel-orellana-vasquez/" class="social__link">
+                                    <i class="social__icon fa-brands fa-linkedin"></i>
+                                </a>
+                            </li>
+
+                            <li class="social__option">
+                                <a href="https://github.com/gabrielleSoftwareDeveloper" class="social__link">
+                                    <i class="social__icon fa-brands fa-github"></i>
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <!--Botón del currículum.-->
+                    <div class="user-info__buttons">
+                        <a href="#" class="user-info__btn">
+                            Descargar CV
+                        </a>
+                    </div>
+
+                    <!--Pie de página.-->
+                    <footer class="user-info__footer">
+                       &copy; 2024 Gabriel Orellana Vásquez 
+                    </footer>
+
+                </section>
+        </aside>
+
+        <!-- Menú responsive. -->
+        <div class="layout__menu-toggle">
+            <i class="menu-togle__icon fa-solid fa-bars"></i>
+            <i class="menu-togle__icon fa-solid fa-xmark"></i>
+        </div>
+
+        <!-- Contenido principal-->
+        <main class="layout__content">
+            <section class="content__page content__resume">
+                <!-- Este contenido cambia en cada página del sitio web.-->
+               <header class="resume__header">
+                    <h1 class="resume__title">Currículum</h1>
+               </header>
+
+               <div class="resume__container">
+                    
+                    <section class="resume__left">
+                        <header class="resume__subheader">
+                            <h2 class="resume__subtitle">Formación</h2>
+                        </header>
+
+                        <div class="resume__timelines">
+                            <article class="timelines__timeline">
+                                <header class="timeline__header">
+                                    <h4 class="timeline__year">2021 - 2023</h4>
+                                <span class="timeline__company">IES Matemático Puig Adam</span>
+                                </header>
+
+                                <div class="timeline__divider"></div>
+                                
+                                <div class="timeline__description">
+                                    <h3 class="timeline__title">Desarrollo de Aplciaciones Web</h3>
+                                    <p class="timeline_text">
+                                        Ciclo Formativo de Grado Superior
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="timelines__timeline">
+                                <header class="timeline__header">
+                                    <h4 class="timeline__year">2020 - 2021</h4>
+                                <span class="timeline__company">MEDAC</span>
+                                </header>
+
+                                <div class="timeline__divider"></div>
+                                
+                                <div class="timeline__description">
+                                    <h3 class="timeline__title">Cosmética y dermofarmacia</h3>
+                                    <p class="timeline_text">
+                                        Máster
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="timelines__timeline">
+                                <header class="timeline__header">
+                                    <h4 class="timeline__year">2018 - 2020</h4>
+                                <span class="timeline__company">IES Ícaro</span>
+                                </header>
+
+                                <div class="timeline__divider"></div>
+                                
+                                <div class="timeline__description">
+                                    <h3 class="timeline__title">Dietética / Dietista</h3>
+                                    <p class="timeline_text">
+                                        Ciclo Formativo de Grado Superior
+                                    </p>
+                                </div>
+                            </article>
+
+                            <article class="timelines__timeline">
+                                <header class="timeline__header">
+                                    <h4 class="timeline__year">2016 - 2018</h4>
+                                <span class="timeline__company">IES Siglo XXI</span>
+                                </header>
+
+                                <div class="timeline__divider"></div>
+                                
+                                <div class="timeline__description">
+                                    <h3 class="timeline__title">Técnico de Farmacia</h3>
+                                    <p class="timeline_text">
+                                        Ciclo Formativo de Grado Medio
+                                    </p>
+                                </div>
+                            </article>
+
+                        </div>
+
+
+                        <header class="resume__subheader">
+                            <h2 class="resume__subtitle">Experiencia</h2>
+                        </header>
+
+                        <div class="resume__timelines">
+                            <article class="timelines__timeline">
+                                <header class="timeline__header">
+                                    <h4 class="timeline__year">2024</h4>
+                                <span class="timeline__company">Ministerio de Defensa (EMAD)</span>
+                                </header>
+
+                                <div class="timeline__divider"></div>
+                                
+                                <div class="timeline__description">
+                                    <h3 class="timeline__title">Desarrollador de Software</h3>
+                                    <p class="timeline_text">
+                                        Análisis y diseño de la interfaz Web (Mockups, detección de áreas funcionales, ...).
+                                    </p>
+
+                                    <p class="timeline_text">
+                                        Desarrollo Front-end: HTML, CSS y JavaScript en SharePoint.
+                                    </p>
+
+                                    <p class="timeline_text">
+                                        Utilización de herramientas complementarias: PowerBI, SharePoint Designer, Infopath, VisualBasic, Excel, Word, PowerPoint.
+                                    </p>
+
+                                    <p class="timeline_text">
+                                        Elaboración de documentación y apoyo a la educación digital de los miembros del EMAD.
+                                    </p>
+                        
+                                </div>
+                            </article>
+
+                            <article class="timelines__timeline">
+                                <header class="timeline__header">
+                                    <h4 class="timeline__year">2023</h4>
+                                <span class="timeline__company">SM Solutions</span>
+                                </header>
+
+                                <div class="timeline__divider"></div>
+                                
+                                <div class="timeline__description">
+                                    <h3 class="timeline__title">Desarrollador Web</h3>
+
+                                    <p class="timeline_text">
+                                        Maquetación web y desarrollo de softskills (trabajo en equipo).
+                                    </p>
+
+                                    <p class="timeline_text">
+                                        Desarrollo Front-end: HTML, CSS - Bootstrap, Javascript.
+                                    </p>
+                                    <p class="timeline_text">
+                                        Desarrollo Back-end: PHP nativo, SQL (MariaDB). 
+                                    </p>
+
+                                </div>
+                            </article>
+
+                            <article class="timelines__timeline">
+                                <header class="timeline__header">
+                                    <h4 class="timeline__year">2023</h4>
+                                <span class="timeline__company">Sellos Moreno</span>
+                                </header>
+
+                                <div class="timeline__divider"></div>
+                                
+                                <div class="timeline__description">
+                                    <h3 class="timeline__title">Desarrollador Web</h3>
+                                    <p class="timeline_text">
+                                        Realización de una página web en equipo perteneciente a un pequeño negocio a lo largo 
+                                        de mi desarrollo educativo.
+                                    </p>
+                                    <p class="timeline_text">
+                                        Diseño completo de la interfaz web.
+                                    </p>
+                                    <p class="timeline_text">
+                                        Desarrollo Front-end: HTML, CSS - Bootstrap, Bootstrap, JavaScript.
+                                    </p>
+                                    <p class="timeline_text">
+                                        Desarrollo Back-end: PHP y SQL.
+                                    </p>
+                                </div>
+                            </article>
+
+                        </div>
+
+                    </section>
+
+                    <section class="resume__right">
+                        <header class="resume__subheader">
+                            <h2 class="resume__subtitle">Habilidades de <span class="subtitle__color">diseño</span></h2>
+                        </header>
+
+                        <div class="resume__skills"> 
+                            <article class="skills__title">
+                                <h4 class="skills__text">Diseño Web</h4>
+                                <span class="skills__number">90%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p9"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">    
+                            <article class="skills__title">
+                                <h4 class="skills__text">Diseño Mockups</h4>
+                                <span class="skills__number">70%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p7"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">
+                            <article class="skills__title">
+                                <h4 class="skills__text">Diseño Logos</h4>
+                                <span class="skills__number">60%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p6"></div>
+                            </div>
+                        </div>
+
+
+
+                        <header class="resume__subheader">
+                            <h2 class="resume__subtitle">Habilidades de <span class="subtitle__color">código</span></h2>
+                        </header>
+
+                        <div class="resume__skills"> 
+                            <article class="skills__title">
+                                <h4 class="skills__text">HTML</h4>
+                                <span class="skills__number">100%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p10"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">    
+                            <article class="skills__title">
+                                <h4 class="skills__text">CSS</h4>
+                                <span class="skills__number">90%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p9"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">
+                            <article class="skills__title">
+                                <h4 class="skills__text">JavaScript</h4>
+                                <span class="skills__number">80%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p8"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">
+                            <article class="skills__title">
+                                <h4 class="skills__text">TypeScript</h4>
+                                <span class="skills__number">70%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p7"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">
+                            <article class="skills__title">
+                                <h4 class="skills__text">PHP</h4>
+                                <span class="skills__number">80%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p8"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">
+                            <article class="skills__title">
+                                <h4 class="skills__text">Java</h4>
+                                <span class="skills__number">70%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p7"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">
+                            <article class="skills__title">
+                                <h4 class="skills__text">Python</h4>
+                                <span class="skills__number">70%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p7"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">
+                            <article class="skills__title">
+                                <h4 class="skills__text">Bash scripting</h4>
+                                <span class="skills__number">50%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p5"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">
+                            <article class="skills__title">
+                                <h4 class="skills__text">SQL</h4>
+                                <span class="skills__number">90%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p9"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">
+                            <article class="skills__title">
+                                <h4 class="skills__text">MongoDB</h4>
+                                <span class="skills__number">30%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p3"></div>
+                            </div>
+                        </div>
+                        
+                        <header class="resume__subheader">
+                            <h2 class="resume__subtitle">Frameworks</h2>
+                        </header>
+
+                        <div class="resume__skills">
+                            <article class="skills__title">
+                                <h4 class="skills__text">Angular</h4>
+                                <span class="skills__number">70%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p7"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">
+                            <article class="skills__title">
+                                <h4 class="skills__text">React</h4>
+                                <span class="skills__number">60%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p6"></div>
+                            </div>
+                        </div>
+
+                        <div class="resume__skills">
+                            <article class="skills__title">
+                                <h4 class="skills__text">Bootstrap</h4>
+                                <span class="skills__number">80%</span>
+                            </article>
+
+                            <div class="skills__progressbar">
+                                <div class="skills__percentage skills__percentage--p8"></div>
+                            </div>
+                        </div>
+
+                        <header class="resume__subheader">
+                            <h2 class="resume__subtitle">Conocimientos <span class="subtitle__color">extra</span></h2>
+                        </header>
+
+                        <div class="resume__knowledges">
+                            <ul class="knowledges__list">
+                                <li class="knowledges__option">Metodología BEM</li>
+                                <li class="knowledges__option">Agile-Scrum</li>
+                                <li class="knowledges__option">Windows</li>
+                                <li class="knowledges__option">Linux</li>
+                                <li class="knowledges__option">Máquinas virtuales</li>
+                                <li class="knowledges__option">GitHub</li>
+                                <li class="knowledges__option">MySQL Workbench</li>
+                                <li class="knowledges__option">MariaDB</li>
+                                <li class="knowledges__option">XML</li>
+                                <li class="knowledges__option">Json</li>
+                                <li class="knowledges__option">AJAX</li>
+                                <li class="knowledges__option">PowerBI</li>
+                                <li class="knowledges__option">Data Analysis</li>
+                                <li class="knowledges__option">Python - Numpy, Pandas & Matplot</li>
+                                <li class="knowledges__option">Microsoft Office</li>
+                                <li class="knowledges__option">SharePoint</li>
+                                <li class="knowledges__option">SharePoint Designer</li>
+                                <li class="knowledges__option">Infopath</li>
+                            </ul>
+                        </div>
+
+                    </section>
+               </div>
+
+               <div class="resume__certificates">
+                    <header class="resume__header">
+                        <h2 class="resume__title">Certificados</h2>
+                    </header>
+               </div>
+
+               <section class="certificates__container">
+
+                    <article class="certificates__certificate">
+                        <div class="certificate__logo">
+                            <img class="certificate__image" src="assets/img/certificado-1.png">
+                        </div>
+
+                        <div class="certificates__content">
+                            <h4 class="certificate__title">Python 3 Plus: Python desde Cero + Data Analysis y Matplot</h4>
+                            <span class="certificate__id">ID credencial: UC-e4c38d61-af60-44be-af24-454a27db03fc/</span>
+                            <span class="certificate__date">15 de mayo de 2024</span>
+                        </div>
+
+                    </article>
+
+                    <article class="certificates__certificate">
+                        <div class="certificate__logo">
+                            <img class="certificate__image" src="assets/img/certificado-2.png">
+                        </div>
+
+                        <div class="certificates__content">
+                            <h4 class="certificate__title">EF SET Certifcate</h4>
+                            <span class="certificate__id">EF SET English Certificate 66/100 (C1 Advanced)</span>
+                            <span class="certificate__date">24 de diciembre de 2023</span>
+                        </div>
+
+                    </article>
+
+                    <article class="certificates__certificate">
+                        <div class="certificate__logo">
+                            <img class="certificate__image" src="assets/img/certificado-1.png">
+                        </div>
+
+                        <div class="certificates__content">
+                            <h4 class="certificate__title">Python 3: Análisis y visualización de datos</h4>
+                            <span class="certificate__id">ID credencial: UC-0e0732ea-aabb-4114-8221-2f743c9b5559/</span>
+                            <span class="certificate__date">13 de noviembre de 2023</span>
+                        </div>
+
+                    </article>
+
+                    <article class="certificates__certificate">
+                        <div class="certificate__logo">
+                            <img class="certificate__image" src="assets/img/certificado-1.png">
+                        </div>
+
+                        <div class="certificates__content">
+                            <h4 class="certificate__title">Universidad Angular - De Cero a Experto en Angular!</h4>
+                            <span class="certificate__id">ID credencial: UC-fc927a08-7b39-41e4-85f5-e0d2e764be83/</span>
+                            <span class="certificate__date">14 de noviembre de 2023</span>
+                        </div>
+
+                    </article>
+
+                    <article class="certificates__certificate">
+                        <div class="certificate__logo">
+                            <img class="certificate__image" src="assets/img/certificado-1.png">
+                        </div>
+
+                        <div class="certificates__content">
+                            <h4 class="certificate__title">Gestión Ágil de Proyectos con Scrum: Curso AGILE </h4>
+                            <span class="certificate__id">ID credencial: UC-915c48d2-e6f0-4e57-a168-66d2e8718219/</span>
+                            <span class="certificate__date">08 de noviembre de 2023</span>
+                        </div>
+
+                    </article>
+
+                    <article class="certificates__certificate">
+                        <div class="certificate__logo">
+                            <img class="certificate__image" src="assets/img/certificado-1.png">
+                        </div>
+
+                        <div class="certificates__content">
+                            <h4 class="certificate__title">Data Analytics,Storage,Mining & Visual Big Data Technologies</h4>
+                            <span class="certificate__id">ID credencial: UC-274ce6ea-3564-46e7-afb7-3d9a3cbea309/</span>
+                            <span class="certificate__date">06 de noviembre de 2023</span>
+                        </div>
+
+                    </article>
+
+                    <article class="certificates__certificate">
+                        <div class="certificate__logo">
+                            <img class="certificate__image" src="assets/img/certificado-1.png">
+                        </div>
+
+                        <div class="certificates__content">
+                            <h4 class="certificate__title">Master Course in Cloud Computing and Cloud Architecture 2.0</h4>
+                            <span class="certificate__id">UC-28e66398-1310-4397-ad8f-474606de43bf/</span>
+                            <span class="certificate__date">06 de noviembre de 2023</span>
+                        </div>
+
+                    </article>
+
+                    <article class="certificates__certificate">
+                        <div class="certificate__logo">
+                            <img class="certificate__image" src="assets/img/certificado-1.png">
+                        </div>
+
+                        <div class="certificates__content">
+                            <h4 class="certificate__title">Curso Python - Desde cero para principiantes</h4>
+                            <span class="certificate__id">ID credencial: UC-4c4bb9f4-4973-4180-95df-b58498b50d69/</span>
+                            <span class="certificate__date">06 de noviembre de 2023</span>
+                        </div>
+
+                    </article>
+
+               </section>
+
+            </section>
+        </main>
+    </div>
+
+</body>
+</html>
