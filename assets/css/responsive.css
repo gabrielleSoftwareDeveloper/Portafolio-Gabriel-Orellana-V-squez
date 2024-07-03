@@ -294,6 +294,10 @@
 
 @media (max-width: 480px){
 
+    .layout{
+        overflow-x: hidden; /*Evita evfecto pantalla en blanco por detrás.*/
+    }
+
     .form__container{
         display: flex;
         flex-direction: column;
