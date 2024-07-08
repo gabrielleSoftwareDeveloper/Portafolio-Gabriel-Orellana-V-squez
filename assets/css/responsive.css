@@ -295,7 +295,7 @@
 @media (max-width: 480px){
 
     .layout{
-        overflow-x: hidden; /*Evita evfecto pantalla en blanco por detrás.*/
+        overflow-x: hidden; /*Evita efecto pantalla en blanco por detrás.*/
     }
 
     .form__container{
@@ -313,4 +313,28 @@
         max-height: 100%;
     }
     
+}
+
+@media (max-width: 400px){
+
+    .timeline__description--large-title{
+        padding-left: 1.8rem;
+    }
+
+}
+
+@media (max-width: 380px){
+
+    .timeline__description--large-title{
+        padding-left: 1.2rem;
+    }
+
+}
+
+@media (max-width: 360px){
+
+    .timeline__description--large-title{
+        padding-left: 1rem;
+    }
+
 }
