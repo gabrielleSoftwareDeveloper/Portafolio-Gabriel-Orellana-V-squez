@@ -338,3 +338,11 @@
     }
 
 }
+
+@media (max-width: 360px){
+
+    .timeline__description--large-title{
+        padding-left: 1rem;
+    }
+
+}
