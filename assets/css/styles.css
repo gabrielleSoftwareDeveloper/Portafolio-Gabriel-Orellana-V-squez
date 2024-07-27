@@ -43,9 +43,14 @@ h1, h2, h3, h4, h5, h6{
 }
 
 
-/*Imagen de fondo*/
+/*Imagen de fondo (junto a otras opciones)*/
 body{
-    background: url("../img/fondo.png");
+    background-color: #fffcf6;
+    background-image: linear-gradient(19deg, #fffcf6 0%, #ffedec 24%, #fffcf6 49%, #ffedec 75%, #fffcf6 100%); 
+   /*    
+    background-color: #f3e6d6;
+    background-image: linear-gradient(19deg, #f3e6d6 0%, #faaca8 24%, #f3e6d6 49%, #faaca8 75%, #f3e6d6 100%); */
+   /* background: url("../img/fondo.png");
     background-repeat: no-repeat;
     background-position: -128px -128px; /*Desplazamiento x e y.*/
 
