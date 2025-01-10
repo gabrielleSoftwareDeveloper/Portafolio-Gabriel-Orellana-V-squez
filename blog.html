@@ -1,116 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <!-- Estilos -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"/>
-    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/scroll.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css"/>
+    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css" />
+    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/scroll.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css" />
 
-     <!-- Scripts -->
-     <script src="assets/js/menu.js" defer></script>
+    <!-- Scripts -->
+    <script src="assets/js/menu.js" defer></script>
 
     <title>Portafolio - Gabriel Orellana Vásquez</title>
 </head>
+
 <body>
 
     <!-- Layour principal, lo contendrá todo.-->
     <div class="layout">
         <!-- Barra lateral (info de usuario).-->
         <aside class="layout__aside">
-                <section class="aside__user-info">
-                    <!--Información general del usuario.-->
-                    <div class="user-info__general">
-                            <div class="user-info__container-image">
-                                <img src="assets/img/default-user.jpg" alt="" class="user-info__image"/>
-                                <!-- La sombra de la imagen se agrega aquí con ::after-->
-                            </div>
-                            <h2 class="user-info__name">Gabriel Orellana Vásquez</h2>
-                            <div class="user-info__job">Desarrollador Web</div>
+            <section class="aside__user-info">
+                <!--Información general del usuario.-->
+                <div class="user-info__general">
+                    <div class="user-info__container-image">
+                        <img src="assets/img/default-user.jpg" alt="" class="user-info__image" />
+                        <!-- La sombra de la imagen se agrega aquí con ::after-->
                     </div>
-                    <!--Menú de navegación.-->
-                    <nav class="layout__menu">
-                        <ul class="menu__list">
-                            <li class="menu__option">
-                                <a href="index.html" class="menu__link">
-                                    <i class="menu__icon fa-solid fa-house"></i>
-                                    <span class="menu__overlay">Home</span>
-                                </a>                            
-                            </li>
+                    <h2 class="user-info__name">Gabriel Orellana Vásquez</h2>
+                    <div class="user-info__job">Desarrollador Web</div>
+                </div>
+                <!--Menú de navegación.-->
+                <nav class="layout__menu">
+                    <ul class="menu__list">
+                        <li class="menu__option">
+                            <a href="index.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-house"></i>
+                                <span class="menu__overlay">Home</span>
+                            </a>
+                        </li>
 
-                            <li class="menu__option">
-                                <a href="sobre-mi.html" class="menu__link">
-                                    <i class="menu__icon fa-solid fa-user"></i>
-                                    <span class="menu__overlay">Sobre mí</span>
-                                </a>                            
-                            </li>
+                        <li class="menu__option">
+                            <a href="sobre-mi.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-user"></i>
+                                <span class="menu__overlay">Sobre mí</span>
+                            </a>
+                        </li>
 
-                            <li class="menu__option">
-                                <a href="curriculum.html" class="menu__link">
-                                    <i class="menu__icon fa-solid fa-graduation-cap"></i>
-                                    <span class="menu__overlay">Curriculum</span>
-                                </a>                            
-                            </li>
+                        <li class="menu__option">
+                            <a href="curriculum.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-graduation-cap"></i>
+                                <span class="menu__overlay">Curriculum</span>
+                            </a>
+                        </li>
 
-                            <li class="menu__option">
-                                <a href="portafolio.html" class="menu__link">
-                                    <i class="menu__icon fa-solid fa-briefcase"></i>
-                                    <span class="menu__overlay">Portafolio</span>
-                                </a>
-                            </li>
+                        <li class="menu__option">
+                            <a href="portafolio.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-briefcase"></i>
+                                <span class="menu__overlay">Portafolio</span>
+                            </a>
+                        </li>
 
-                            <li class="menu__option">
-                                <a href="blog.html" class="menu__link menu__link--active">
-                                    <i class="menu__icon fa-solid fa-book"></i>
-                                    <span class="menu__overlay">Blog</span>
-                                </a>                            
-                            </li>
+                        <li class="menu__option">
+                            <a href="blog.html" class="menu__link menu__link--active">
+                                <i class="menu__icon fa-solid fa-book"></i>
+                                <span class="menu__overlay">Blog</span>
+                            </a>
+                        </li>
 
-                            <li class="menu__option">
-                                <a href="contacto.html" class="menu__link">
-                                    <i class="menu__icon fa-solid fa-envelope"></i>
-                                    <span class="menu__overlay">Contacto</span>
-                                </a>                            
-                            </li>
-                        </ul>
-                    </nav>
+                        <li class="menu__option">
+                            <a href="contacto.html" class="menu__link">
+                                <i class="menu__icon fa-solid fa-envelope"></i>
+                                <span class="menu__overlay">Contacto</span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
 
-                    <!--Links a redes sociales.-->
-                    <div class="user-info__user-links">
+                <!--Links a redes sociales.-->
+                <div class="user-info__user-links">
 
-                        <ul class="user-links__social">
-                            <li class="social__option">
-                                <a href="https://www.linkedin.com/in/gabriel-orellana-vasquez/" class="social__link" target="_blank">
-                                    <i class="social__icon fa-brands fa-linkedin"></i>
-                                </a>
-                            </li>
+                    <ul class="user-links__social">
+                        <li class="social__option">
+                            <a href="https://www.linkedin.com/in/gabriel-orellana-vasquez/" class="social__link"
+                                target="_blank">
+                                <i class="social__icon fa-brands fa-linkedin"></i>
+                            </a>
+                        </li>
 
-                            <li class="social__option">
-                                <a href="https://github.com/gabrielleSoftwareDeveloper" class="social__link" target="_blank">
-                                    <i class="social__icon fa-brands fa-github"></i>
-                                </a>
-                            </li>
-                        </ul>
+                        <li class="social__option">
+                            <a href="https://github.com/gabrielleSoftwareDeveloper" class="social__link"
+                                target="_blank">
+                                <i class="social__icon fa-brands fa-github"></i>
+                            </a>
+                        </li>
+                    </ul>
 
-                    </div>
+                </div>
 
-                    <!--Botón del currículum.-->
-                    <div class="user-info__buttons">
-                        <a href="assets/documents/Curriculum_09_2024_Gabriel_Orellana_SD.pdf" class="user-info__btn" target="_blank">
-                            Descargar CV
-                        </a>
-                    </div>
+                <!--Botón del currículum.-->
+                <div class="user-info__buttons">
+                    <a href="assets/documents/Curriculum_01_2025_Gabriel_Orellana_SD.pdf" class="user-info__btn"
+                        target="_blank">
+                        Descargar CV
+                    </a>
+                </div>
 
-                    <!--Pie de página.-->
-                    <footer class="user-info__footer">
-                       &copy; 2024 Gabriel Orellana Vásquez 
-                    </footer>
+                <!--Pie de página.-->
+                <footer class="user-info__footer">
+                    &copy; 2024 Gabriel Orellana Vásquez
+                </footer>
 
-                </section>
+            </section>
         </aside>
 
         <!-- Menú responsive. -->
@@ -123,9 +128,9 @@
         <main class="layout__content">
             <section class="content__page content__blog">
                 <!-- Este contenido cambia en cada página del sitio web.-->
-               <header class="blog__header">
+                <header class="blog__header">
                     <h1 class="blog__title">Blog</h1>
-               </header>
+                </header>
 
                 <section class="blog__articles">
 
@@ -133,9 +138,10 @@
 
                         <div class="article__top">
                             <div class="article__category">Memoria Nelumbo Nucífera</div>
-                            <a href="assets/documents/Orellana.Gabriel-Memoria.pdf" class="article_image-link" target="_blank" download="Nelumbo Nucífera - Proyecto Final de Ciclo">
+                            <a href="assets/documents/Orellana.Gabriel-Memoria.pdf" class="article_image-link"
+                                target="_blank" download="Nelumbo Nucífera - Proyecto Final de Ciclo">
                                 <div class="article__mask">
-                                    <img src="assets/img/articulo-1.jpg" class="article__image" alt="Imagen dle blog"/>
+                                    <img src="assets/img/articulo-1.jpg" class="article__image" alt="Imagen dle blog" />
                                 </div>
                                 <div class="article__logo">
                                     <i class="article__icon fa-solid fa-book"></i>
@@ -145,7 +151,8 @@
 
                         <div class="article__bottom">
                             <time datetime="2024-06-21" class="article__date">21/06/2023</time>
-                            <a href="assets/documents/Orellana.Gabriel-Memoria.pdf" class="article__link" target="_blank" download="Nelumbo Nucífera - Proyecto Final de Ciclo">
+                            <a href="assets/documents/Orellana.Gabriel-Memoria.pdf" class="article__link"
+                                target="_blank" download="Nelumbo Nucífera - Proyecto Final de Ciclo">
                                 <h2 class="article__title">Elaboración de Nelumbo Nucífera</h2>
                             </a>
                         </div>
@@ -155,9 +162,10 @@
 
                         <div class="article__top">
                             <div class="article__category">Propuesta Sculp</div>
-                            <a href="assets/documents/Sculp.pdf" class="article_image-link" target="_blank" download="Propuesta inicial de la interfaz de Sculp">
+                            <a href="assets/documents/Sculp.pdf" class="article_image-link" target="_blank"
+                                download="Propuesta inicial de la interfaz de Sculp">
                                 <div class="article__mask">
-                                    <img src="assets/img/articulo-3.jpg" class="article__image" alt="Imagen dle blog"/>
+                                    <img src="assets/img/articulo-3.jpg" class="article__image" alt="Imagen dle blog" />
                                 </div>
                                 <div class="article__logo">
                                     <i class="article__icon fa-solid fa-book"></i>
@@ -167,13 +175,14 @@
 
                         <div class="article__bottom">
                             <time datetime="2024-06-21" class="article__date">21/06/2024</time>
-                            <a href="assets/documents/Sculp.pdf" class="article__link" target="_blank" download="Propuesta inicial de la interfaz de Sculp">
+                            <a href="assets/documents/Sculp.pdf" class="article__link" target="_blank"
+                                download="Propuesta inicial de la interfaz de Sculp">
                                 <h2 class="article__title">Propuesta inicial de la interfaz de Sculp</h2>
                             </a>
                         </div>
                     </article>
 
-                    
+
 
                 </section>
 
@@ -182,4 +191,5 @@
     </div>
 
 </body>
+
 </html>

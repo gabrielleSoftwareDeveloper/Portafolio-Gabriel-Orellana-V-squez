@@ -819,6 +819,7 @@ body{
     border-radius: 0.8rem;
     display: flex;
     flex-direction: row;
+    cursor: pointer;
 }
 
 .certificate__logo{

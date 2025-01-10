@@ -1,27 +1,6 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-<!-- Estilos -->
-    <link rel="stylesheet" href="assets/fonts/fontawesome-free-6.1.2-web/css/all.min.css"/>
-    <link rel="stylesheet" href="assets/fonts/poppins/poppins.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/reset.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/styles.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/scroll.css"/>
-    <link rel="stylesheet" type="text/css" href="assets/css/responsive.css"/>
-
-    <!-- Scripts -->
-     <script src="assets/js/menu.js" defer></script>
-
-    <title>Portafolio - Gabriel Orellana Vásquez</title>
-</head>
-<body>
-
-    <!-- Layour principal, lo contendrá todo.-->
-    <div class="layout">
-        <!-- Barra lateral (info de usuario).-->
-        <aside class="layout__aside">
+// Próximamente.
+document.addEventListener("DOMContentLoaded", () => {
+  const asideTemplate = `
                 <section class="aside__user-info">
                     <!--Información general del usuario.-->
                     <div class="user-info__general">
@@ -36,7 +15,7 @@
                     <nav class="layout__menu">
                         <ul class="menu__list">
                             <li class="menu__option">
-                                <a href="index.html" class="menu__link menu__link--active">
+                                <a href="index.html" class="menu__link">
                                     <i class="menu__icon fa-solid fa-house"></i>
                                     <span class="menu__overlay">Home</span>
                                 </a>                            
@@ -64,7 +43,7 @@
                             </li>
 
                             <li class="menu__option">
-                                <a href="blog.html" class="menu__link">
+                                <a href="blog.html" class="menu__link menu__link--active">
                                     <i class="menu__icon fa-solid fa-book"></i>
                                     <span class="menu__overlay">Blog</span>
                                 </a>                            
@@ -110,23 +89,8 @@
                        &copy; 2024 Gabriel Orellana Vásquez 
                     </footer>
 
-                </section>
-        </aside>
-
-        <!-- Menú responsive. -->
-        <div class="layout__menu-toggle">
-            <i class="menu-togle__icon fa-solid fa-bars"></i>
-            <i class="menu-togle__icon fa-solid fa-xmark"></i>
-        </div>
-
-        <!-- Contenido principal-->
-        <main class="layout__content">
-            <section class="content__page">
-                <h1 class="page__name">Gabriel Orellana Vásquez</h1>
-                <h2 class="page__job">Desarrollador Web</h2>
-            </section>
-        </main>
-    </div>
-
-</body>
-</html>
+                </section>`;
+  
+  // Adición del navegador en sus correspondientes contenedores.
+      document.querySelector(".layout__aside").innerHTML = asideTemplate;
+  });
